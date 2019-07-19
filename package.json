@@ -1,6 +1,6 @@
 {
   "name": "scale-helper-functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper to create scales",
   "main": "index.js",
   "author": "Alberto Rico",
@@ -19,7 +19,7 @@
     "d3-scale": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.0.1"
   },
   "prettier": {
     "trailingComma": "es5",
