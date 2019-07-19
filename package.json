@@ -1,0 +1,31 @@
+{
+  "name": "scale-helper-functions",
+  "version": "1.0.0",
+  "description": "Helper to create scales",
+  "main": "index.js",
+  "author": "Alberto Rico",
+  "repository": {
+    "url": "https://github.com/alrico88/scale-helper-functions"
+  },
+  "keywords": [
+    "scales",
+    "linear",
+    "log",
+    "d3",
+    "helper"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "d3-scale": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "eslintIntegration": true
+  }
+}
