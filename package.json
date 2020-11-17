@@ -19,13 +19,6 @@
     "d3-scale": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.1"
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true,
-    "eslintIntegration": true
+    "eslint": "^7.13.0"
   }
 }

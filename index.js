@@ -13,9 +13,7 @@ const {
  * @returns {Function} The scale function
  */
 function createLinearScale(domain, range) {
-  return scaleLinear()
-    .domain(domain)
-    .range(range);
+  return scaleLinear().domain(domain).range(range);
 }
 
 /**
@@ -23,12 +21,15 @@ function createLinearScale(domain, range) {
  *
  * @param {number[]} domain [min, max]
  * @param {number[]} range Desired resulting values of scaling
+ * @param {number} [base] Base to use for log scale
  * @returns {Function} The scale function
  */
-function createLogScale(domain, range) {
-  return scaleLog()
-    .domain(domain)
-    .range(range);
+function createLogScale(domain, range, base) {
+  if (base) {
+    return scaleLog().base(base).domain(domain).range(range);
+  } else {
+    return scaleLog().domain(domain).range(range);
+  }
 }
 
 /**
@@ -39,9 +40,7 @@ function createLogScale(domain, range) {
  * @returns {Function} The scale function
  */
 function createQuantileScale(dataset, range) {
-  return scaleQuantile()
-    .domain(dataset)
-    .range(range);
+  return scaleQuantile().domain(dataset).range(range);
 }
 
 /**
@@ -52,12 +51,12 @@ function createQuantileScale(dataset, range) {
  * @returns {Function} The scale function
  */
 function createQuantizeScale(domain, range) {
-  return scaleQuantize()
-    .domain(domain)
-    .range(range);
+  return scaleQuantize().domain(domain).range(range);
 }
 
-module.exports.createLinearScale = createLinearScale;
-module.exports.createLogScale = createLogScale;
-module.exports.createQuantileScale = createQuantileScale;
-module.exports.createQuantizeScale = createQuantizeScale;
+module.exports = {
+  createLinearScale,
+  createLogScale,
+  createQuantileScale,
+  createQuantizeScale,
+};

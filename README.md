@@ -4,7 +4,7 @@
 <dt><a href="#createLinearScale">createLinearScale(domain, range)</a> ⇒ <code>function</code></dt>
 <dd><p>Creates a linear scale</p>
 </dd>
-<dt><a href="#createLogScale">createLogScale(domain, range)</a> ⇒ <code>function</code></dt>
+<dt><a href="#createLogScale">createLogScale(domain, range, [base])</a> ⇒ <code>function</code></dt>
 <dd><p>Creates a log scale</p>
 </dd>
 <dt><a href="#createQuantileScale">createQuantileScale(dataset, range)</a> ⇒ <code>function</code></dt>
@@ -21,7 +21,7 @@
 
 Creates a linear scale
 
-**Kind**: global function
+**Kind**: global function  
 **Returns**: <code>function</code> - The scale function
 
 | Param  | Type                              | Description                         |
@@ -31,17 +31,18 @@ Creates a linear scale
 
 <a name="createLogScale"></a>
 
-## createLogScale(domain, range) ⇒ <code>function</code>
+## createLogScale(domain, range, [base]) ⇒ <code>function</code>
 
 Creates a log scale
 
-**Kind**: global function
+**Kind**: global function  
 **Returns**: <code>function</code> - The scale function
 
 | Param  | Type                              | Description                         |
 | ------ | --------------------------------- | ----------------------------------- |
 | domain | <code>Array.&lt;number&gt;</code> | [min, max]                          |
 | range  | <code>Array.&lt;number&gt;</code> | Desired resulting values of scaling |
+| [base] | <code>number</code>               | Base to use for log scale           |
 
 <a name="createQuantileScale"></a>
 
@@ -49,7 +50,7 @@ Creates a log scale
 
 Returns a quantile scale based on dataset
 
-**Kind**: global function
+**Kind**: global function  
 **Returns**: <code>function</code> - The scale function
 
 | Param   | Type                              | Description                         |
@@ -63,7 +64,7 @@ Returns a quantile scale based on dataset
 
 Returns a quantized scale based on dataset extent
 
-**Kind**: global function
+**Kind**: global function  
 **Returns**: <code>function</code> - The scale function
 
 | Param  | Type                              | Description                         |
