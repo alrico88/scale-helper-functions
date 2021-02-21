@@ -1,6 +1,6 @@
 {
   "name": "scale-helper-functions",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Helper to create scales",
   "main": "index.js",
   "author": "Alberto Rico",
