@@ -19,6 +19,12 @@
     "d3-scale": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.13.0"
-  }
+    "eslint": "^7.13.0",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "prepublish": "yarn run typings",
+    "typings": "tsc"
+  },
+  "types": "./index.d.ts"
 }

@@ -1,14 +1,6 @@
-const {
-  scaleLinear,
-  scaleLog,
-  scaleQuantile,
-  scaleQuantize,
-} = require('d3-scale');
-
 /**
  * @type {(string|number)[]} Range
  */
-
 /**
  * Creates a linear scale
  *
@@ -16,10 +8,7 @@ const {
  * @param {Range} range Desired resulting values of scaling
  * @returns {Function} The scale function
  */
-function createLinearScale(domain, range) {
-  return scaleLinear().domain(domain).range(range);
-}
-
+export function createLinearScale(domain: number[], range: Range): Function;
 /**
  * Creates a log scale
  *
@@ -28,14 +17,7 @@ function createLinearScale(domain, range) {
  * @param {number} [base] Base to use for log scale
  * @returns {Function} The scale function
  */
-function createLogScale(domain, range, base) {
-  if (base) {
-    return scaleLog().base(base).domain(domain).range(range);
-  } else {
-    return scaleLog().domain(domain).range(range);
-  }
-}
-
+export function createLogScale(domain: number[], range: Range, base?: number): Function;
 /**
  * Returns a quantile scale based on dataset
  *
@@ -43,10 +25,7 @@ function createLogScale(domain, range, base) {
  * @param {Range} range Desired resulting values of scaling
  * @returns {Function} The scale function
  */
-function createQuantileScale(dataset, range) {
-  return scaleQuantile().domain(dataset).range(range);
-}
-
+export function createQuantileScale(dataset: number[], range: Range): Function;
 /**
  * Returns a quantized scale based on dataset extent
  *
@@ -54,13 +33,4 @@ function createQuantileScale(dataset, range) {
  * @param {Range} range Desired resulting values of scaling
  * @returns {Function} The scale function
  */
-function createQuantizeScale(domain, range) {
-  return scaleQuantize().domain(domain).range(range);
-}
-
-module.exports = {
-  createLinearScale,
-  createLogScale,
-  createQuantileScale,
-  createQuantizeScale,
-};
+export function createQuantizeScale(domain: number[], range: Range): Function;
