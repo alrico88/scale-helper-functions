@@ -1,5 +1,6 @@
+export type Range = string[] | number[];
 /**
- * @type {(string|number)[]} Range
+ * @typedef {string[]|number[]} Range
  */
 /**
  * Creates a linear scale

@@ -6,7 +6,7 @@ const {
 } = require('d3-scale');
 
 /**
- * @type {(string|number)[]} Range
+ * @typedef {string[]|number[]} Range
  */
 
 /**

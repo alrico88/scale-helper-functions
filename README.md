@@ -15,59 +15,67 @@
 </dd>
 </dl>
 
+## Typedefs
+
+<dl>
+<dt><a href="#Range">Range</a> : <code>Array.&lt;string&gt;</code> | <code>Array.&lt;number&gt;</code></dt>
+<dd></dd>
+</dl>
+
 <a name="createLinearScale"></a>
 
 ## createLinearScale(domain, range) ⇒ <code>function</code>
-
 Creates a linear scale
 
 **Kind**: global function  
-**Returns**: <code>function</code> - The scale function
+**Returns**: <code>function</code> - The scale function  
 
-| Param  | Type                              | Description                         |
-| ------ | --------------------------------- | ----------------------------------- |
-| domain | <code>Array.&lt;number&gt;</code> | [min, max]                          |
-| range  | <code>Array.&lt;number&gt;</code> | Desired resulting values of scaling |
+| Param | Type | Description |
+| --- | --- | --- |
+| domain | <code>Array.&lt;number&gt;</code> | [min, max] |
+| range | [<code>Range</code>](#Range) | Desired resulting values of scaling |
 
 <a name="createLogScale"></a>
 
 ## createLogScale(domain, range, [base]) ⇒ <code>function</code>
-
 Creates a log scale
 
 **Kind**: global function  
-**Returns**: <code>function</code> - The scale function
+**Returns**: <code>function</code> - The scale function  
 
-| Param  | Type                              | Description                         |
-| ------ | --------------------------------- | ----------------------------------- |
-| domain | <code>Array.&lt;number&gt;</code> | [min, max]                          |
-| range  | <code>Array.&lt;number&gt;</code> | Desired resulting values of scaling |
-| [base] | <code>number</code>               | Base to use for log scale           |
+| Param | Type | Description |
+| --- | --- | --- |
+| domain | <code>Array.&lt;number&gt;</code> | [min, max] |
+| range | [<code>Range</code>](#Range) | Desired resulting values of scaling |
+| [base] | <code>number</code> | Base to use for log scale |
 
 <a name="createQuantileScale"></a>
 
 ## createQuantileScale(dataset, range) ⇒ <code>function</code>
-
 Returns a quantile scale based on dataset
 
 **Kind**: global function  
-**Returns**: <code>function</code> - The scale function
+**Returns**: <code>function</code> - The scale function  
 
-| Param   | Type                              | Description                         |
-| ------- | --------------------------------- | ----------------------------------- |
-| dataset | <code>Array.&lt;number&gt;</code> | Full dataset to take into account   |
-| range   | <code>Array.&lt;number&gt;</code> | Desired resulting values of scaling |
+| Param | Type | Description |
+| --- | --- | --- |
+| dataset | <code>Array.&lt;number&gt;</code> | Full dataset to take into account |
+| range | [<code>Range</code>](#Range) | Desired resulting values of scaling |
 
 <a name="createQuantizeScale"></a>
 
 ## createQuantizeScale(domain, range) ⇒ <code>function</code>
-
 Returns a quantized scale based on dataset extent
 
 **Kind**: global function  
-**Returns**: <code>function</code> - The scale function
+**Returns**: <code>function</code> - The scale function  
 
-| Param  | Type                              | Description                         |
-| ------ | --------------------------------- | ----------------------------------- |
-| domain | <code>Array.&lt;number&gt;</code> | [min, max]                          |
-| range  | <code>Array.&lt;number&gt;</code> | Desired resulting values of scaling |
+| Param | Type | Description |
+| --- | --- | --- |
+| domain | <code>Array.&lt;number&gt;</code> | [min, max] |
+| range | [<code>Range</code>](#Range) | Desired resulting values of scaling |
+
+<a name="Range"></a>
+
+## Range : <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;number&gt;</code>
+**Kind**: global typedef  
