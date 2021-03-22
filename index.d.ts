@@ -35,3 +35,12 @@ export function createQuantileScale(dataset: number[], range: Range): Function;
  * @returns {Function} The scale function
  */
 export function createQuantizeScale(domain: number[], range: Range): Function;
+/**
+ * Returns an ordinal scale
+ * Discrete input and discrete output
+ *
+ * @param {string[]} domain Discrete list of values ['A', 'B', 'C']
+ * @param {Range} range Desired resulting values of scaling
+ * @returns {Function} The scale function
+ */
+export function createOrdinalScale(domain: string[], range: Range): Function;

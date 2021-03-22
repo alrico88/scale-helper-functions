@@ -3,6 +3,7 @@ const {
   scaleLog,
   scaleQuantile,
   scaleQuantize,
+  scaleOrdinal,
 } = require('d3-scale');
 
 /**
@@ -58,9 +59,22 @@ function createQuantizeScale(domain, range) {
   return scaleQuantize().domain(domain).range(range);
 }
 
+/**
+ * Returns an ordinal scale
+ * Discrete input and discrete output
+ *
+ * @param {string[]} domain Discrete list of values ['A', 'B', 'C']
+ * @param {Range} range Desired resulting values of scaling
+ * @returns {Function} The scale function
+ */
+function createOrdinalScale(domain, range) {
+  return scaleOrdinal(domain, range);
+}
+
 module.exports = {
   createLinearScale,
   createLogScale,
   createQuantileScale,
   createQuantizeScale,
+  createOrdinalScale,
 };
