@@ -1,6 +1,6 @@
 {
   "name": "scale-helper-functions",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Helper to create scales",
   "main": "dist/index.js",
   "module": "dist/scale-helper-functions.esm.js",
