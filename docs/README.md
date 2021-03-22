@@ -1,3 +1,5 @@
+scale-helper-functions / [Exports](modules.md)
+
 # scale-helper-functions
 
 Compendium of helpers to create scales
@@ -48,7 +50,7 @@ const color = scale('dog'); // color is brown
 - [createOrdinalScale](#createordinalscale)
 - [createQuantileScale](#createquantilescale)
 - [createQuantizeScale](#createquantizescale)
-- [getLinearDomainRange](#getlineardomainrange)
+- [getDomainRange](#getdomainrange)
 
 ## Type aliases
 
@@ -169,23 +171,17 @@ Defined in: index.ts:52
 
 ---
 
-### getLinearDomainRange
+### getDomainRange
 
-▸ **getLinearDomainRange**(`domain`: _number_[], `segmentsAmount`: _number_): _number_[]
-
-Gets a domain of N elements from a domain with less length
-
-**`export`**
+▸ **getDomainRange**(`domain`: _number_[], `segmentsAmount`: _number_): _number_[]
 
 #### Parameters:
 
-| Name             | Type       | Description                              |
-| :--------------- | :--------- | :--------------------------------------- |
-| `domain`         | _number_[] | The existing domain                      |
-| `segmentsAmount` | _number_   | The desired length for the linear domain |
+| Name             | Type       |
+| :--------------- | :--------- |
+| `domain`         | _number_[] |
+| `segmentsAmount` | _number_   |
 
 **Returns:** _number_[]
 
-The resulting domain
-
-Defined in: index.ts:76
+Defined in: index.ts:68
