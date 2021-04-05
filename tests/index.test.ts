@@ -1,4 +1,4 @@
-import {createLinearScale, getLinearDomainRange, createLinearInterpolator} from '../src';
+import {createLinearScale, getLinearDomainRange, createLinearInterpolator, createOpacityScale} from '../src';
 
 describe('Test domain helpers', () => {
   test('The getLinearDomainRange method\'s result length should have that length', () => {
@@ -29,5 +29,17 @@ describe('Test scale helpers', () => {
     const maxValue = 255;
     const halfPoint = Math.round(maxValue / 2);
     expect(scale(5)).toBe(`rgb(${halfPoint}, ${halfPoint}, ${halfPoint})`);
+  });
+
+  test('The opacity scale should, given a number in the domain, give a value between 0 and 255', () => {
+    const opacityScale = createOpacityScale([0, 300]);
+    const result = opacityScale(2);
+    expect(result < 255 && result > 0).toBe(true);
+  });
+
+  test('The opacity scale should, given a the domain max, return 255', () => {
+    const opacityScale = createOpacityScale([0, 300]);
+    const result = opacityScale(300);
+    expect(result).toBe(255);
   });
 });

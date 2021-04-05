@@ -65,3 +65,15 @@ export function createQuantizeScale(domain: number[], range: Range): ScaleFuncti
 export function createOrdinalScale(domain: string[], range: string[]): OrdinalScaleFunction {
   return scaleOrdinal(domain, range);
 }
+
+/**
+ * Returns, given a domain, a function that will convert a number to another one between 0 and 255
+ * Useful for calculating opacity values for RGBA strings
+ *
+ * @export
+ * @param {number[]} domain [min, max]
+ * @return {ScaleFunction} The scale function
+ */
+export function createOpacityScale(domain: number[]): ScaleFunction {
+  return createLinearScale(domain, [0, 255]);
+}
