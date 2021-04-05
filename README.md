@@ -47,6 +47,7 @@ const color = scale('dog'); // color is brown
 - [createLinearInterpolator](#createlinearinterpolator)
 - [createLinearScale](#createlinearscale)
 - [createLogScale](#createlogscale)
+- [createOpacityScale](#createopacityscale)
 - [createOrdinalScale](#createordinalscale)
 - [createQuantileScale](#createquantilescale)
 - [createQuantizeScale](#createquantizescale)
@@ -70,7 +71,7 @@ const color = scale('dog'); // color is brown
 
 **Returns:** _string_
 
-Defined in: [modules/types.ts:3](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/types.ts#L3)
+Defined in: [modules/types.ts:3](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/types.ts#L3)
 
 ---
 
@@ -90,7 +91,7 @@ Defined in: [modules/types.ts:3](https://github.com/alrico88/scale-helper-functi
 
 **Returns:** _number_ \| _string_
 
-Defined in: [modules/types.ts:1](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/types.ts#L1)
+Defined in: [modules/types.ts:1](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/types.ts#L1)
 
 ## Functions
 
@@ -108,7 +109,7 @@ Function that given a domain, returns a scale that will trasform a number to a v
 
 **Returns:** [_ScaleFunction_](#scalefunction)
 
-Defined in: [modules/interpolation.ts:9](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/interpolation.ts#L9)
+Defined in: [modules/interpolation.ts:9](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/interpolation.ts#L9)
 
 ---
 
@@ -129,7 +130,7 @@ Creates a linear scale
 
 The scale function
 
-Defined in: [modules/scales.ts:13](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/scales.ts#L13)
+Defined in: [modules/scales.ts:13](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L13)
 
 ---
 
@@ -151,7 +152,30 @@ Creates a log scale
 
 The scale function
 
-Defined in: [modules/scales.ts:25](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/scales.ts#L25)
+Defined in: [modules/scales.ts:25](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L25)
+
+---
+
+### createOpacityScale
+
+▸ **createOpacityScale**(`domain`: _number_[]): [_ScaleFunction_](#scalefunction)
+
+Returns, given a domain, a function that will convert a number to another one between 0 and 255
+Useful for calculating opacity values for RGBA strings
+
+**`export`**
+
+#### Parameters:
+
+| Name     | Type       |
+| :------- | :--------- |
+| `domain` | _number_[] |
+
+**Returns:** [_ScaleFunction_](#scalefunction)
+
+The scale function
+
+Defined in: [modules/scales.ts:77](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L77)
 
 ---
 
@@ -173,7 +197,7 @@ Discrete input and discrete output
 
 The scale function
 
-Defined in: [modules/scales.ts:65](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/scales.ts#L65)
+Defined in: [modules/scales.ts:65](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L65)
 
 ---
 
@@ -195,7 +219,7 @@ Maps continuous numeric input to discrete values. The domain is defined by an ar
 
 The scale function
 
-Defined in: [modules/scales.ts:41](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/scales.ts#L41)
+Defined in: [modules/scales.ts:41](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L41)
 
 ---
 
@@ -217,7 +241,7 @@ Accepts continuous input and outputs a number of discrete quantities defined by 
 
 The scale function
 
-Defined in: [modules/scales.ts:53](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/scales.ts#L53)
+Defined in: [modules/scales.ts:53](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/scales.ts#L53)
 
 ---
 
@@ -240,4 +264,4 @@ Gets a domain of N elements from a domain with less length
 
 The resulting domain
 
-Defined in: [modules/helpers.ts:9](https://github.com/alrico88/scale-helper-functions/blob/c37c6da/src/modules/helpers.ts#L9)
+Defined in: [modules/helpers.ts:9](https://github.com/alrico88/scale-helper-functions/blob/4978647/src/modules/helpers.ts#L9)
