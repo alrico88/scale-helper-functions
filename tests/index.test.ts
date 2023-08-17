@@ -1,4 +1,7 @@
-import {createLinearScale, getLinearDomainRange, createLinearInterpolator, createOpacityScale} from '../src';
+import { describe, test, expect } from 'vitest';
+import {
+  createLinearScale, getLinearDomainRange, createLinearInterpolator, createOpacityScale,
+} from '../src';
 
 describe('Test domain helpers', () => {
   test('The getLinearDomainRange method\'s result length should have that length', () => {
@@ -14,7 +17,7 @@ describe('Test interpolation', () => {
 
   test('Interpolating a number bigger than the max of a domain should return a number greater than 1', () => {
     const interpolator = createLinearInterpolator([0, 10]);
-    expect(interpolator(11) > 1).toBe(true);
+    expect(interpolator(11) as number > 1).toBe(true);
   });
 });
 
@@ -33,7 +36,7 @@ describe('Test scale helpers', () => {
 
   test('The opacity scale should, given a number in the domain, give a value between 0 and 255', () => {
     const opacityScale = createOpacityScale([0, 300]);
-    const result = opacityScale(2);
+    const result = opacityScale(2) as number;
     expect(result < 255 && result > 0).toBe(true);
   });
 

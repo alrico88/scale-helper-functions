@@ -1,8 +1,9 @@
-import {createLinearScale} from './scales';
-import {ScaleFunction} from './types';
+import { createLinearScale } from './scales';
+import { ScaleFunction } from './types';
 
 /**
- * Function that given a domain, returns a scale that will trasform a number to a value between 0 and 1
+ * Function that given a domain, returns a scale
+ * It will transform a number to a value between 0 and 1
  * @param {number[]} domain
  * @returns {ScaleFunction}
  */

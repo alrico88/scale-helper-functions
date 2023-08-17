@@ -1,5 +1,7 @@
-import {scaleLinear, scaleLog, scaleQuantile, scaleQuantize, scaleOrdinal} from 'd3-scale';
-import {OrdinalScaleFunction, ScaleFunction} from './types';
+import {
+  scaleLinear, scaleLog, scaleQuantile, scaleQuantize, scaleOrdinal,
+} from 'd3-scale';
+import { OrdinalScaleFunction, ScaleFunction } from './types';
 
 export type Range = string[] | number[];
 
@@ -22,12 +24,11 @@ export function createLinearScale(domain: number[], range: Range): ScaleFunction
  * @param {number} [base] Base to use for log scale
  * @returns {ScaleFunction} The scale function
  */
- export function createLogScale(domain: number[], range: Range, base?: number): ScaleFunction {
+export function createLogScale(domain: number[], range: Range, base?: number): ScaleFunction {
   if (base !== null && base !== undefined) {
     return scaleLog().base(base).domain(domain).range(range as never);
-  } else {
-    return scaleLog().domain(domain).range(range as never);
   }
+  return scaleLog().domain(domain).range(range as never);
 }
 
 /**
@@ -38,7 +39,7 @@ export function createLinearScale(domain: number[], range: Range): ScaleFunction
  * @param {Range} range Desired resulting values of scaling
  * @returns {ScaleFunction} The scale function
  */
- export function createQuantileScale(dataset: number[], range: Range): ScaleFunction {
+export function createQuantileScale(dataset: number[], range: Range): ScaleFunction {
   return scaleQuantile().domain(dataset).range(range as never);
 }
 
