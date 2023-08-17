@@ -6,7 +6,7 @@
  * @param  {number} segmentsAmount The desired length for the linear domain
  * @return {number[]} The resulting domain
  */
- export function getLinearDomainRange(domain: number[], segmentsAmount: number): number[] {
+export function getLinearDomainRange(domain: number[], segmentsAmount: number): number[] {
   const [min, max] = domain;
 
   const step = (max - min) / (segmentsAmount - 1);
